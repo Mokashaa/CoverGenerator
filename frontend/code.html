@@ -5,6 +5,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Paprika' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Pattaya' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Rammetto One' rel='stylesheet'>
 	<style>
 
 
@@ -26,7 +32,7 @@
 
 		.right {
 		  right: 0;
-		  background-color: white;
+		  background-color: #f2f2f2;
 		}
 
 		.centered {
@@ -46,7 +52,15 @@
 	<script>
 		function myfunction()
 		{
-			document.getElementById("title").innerHTML=document.getElementById("btitle").value;
+			document.getElementById("title").innerHTML=document.getElementById("btitle").value;		
+			document.getElementById("subtitle").innerHTML=document.getElementById("bsubtitle").value;
+			document.getElementById("publisherr").innerHTML=document.getElementById("publisher").value;		
+			//document.getElementById("bookstyle").style.background-image.url=document.getElementById("BGimage").value;
+			document.getElementById("bookstyle").style.color=document.getElementById("fcolor").value;
+			document.getElementById("author").innerHTML=document.getElementById("AName").value;
+			//document.getElementById("cover").css=('font-family',' document.getElementById("ffamily").value ');
+			document.getElementById("year").innerHTML=document.getElementById("byear").value;
+
 		}
 	</script>
 </head>
@@ -58,6 +72,7 @@
 		   <p class="navbar-text" style = "font family:Solomon; font-size:25px">Cover Generator</p>
 		</div>
 	</nav>
+	
 	<div class="split left">
 			<div class="container-fluid">
 			  <div class = "jumbotron" style = "background:transparent">
@@ -81,24 +96,44 @@
                     <input type="text" class="form-control" id="publisher" name="publisher" placeholder="Enter publisher name..">
                  </div>
 			     <div class="form-group">
-                    <label for="BGcolor" style = "font family:Solomon; color:#23797f;">Backgroud Color:</label>
-                    <input type="text" class="form-control" id="BGcolor" name="backgroundcolor" placeholder="Choose your backgroud color.." >
-					<span class="help-block" style = "font family:Solomon; color:#23797f;">Enter the hex value of the choosen color. </span>
+                    <label for="BGimage" style = "font family:Solomon; color:#23797f;">Backgroud Image:</label>
+                    <input type="text" class="form-control" id="BGimage" name="backgroundimage" placeholder="leave image URL here.." >
+					<span class="help-block" style = "font family:Solomon; color:#23797f;">Right click on the image and choose copy image address.</span>
+					<span class="help-block" style = "font family:Solomon; color:#23797f;">image size should be around 650*550px.</span>
                  </div>
 			     <div class="form-group">
-                    <label for="year" style = "font family:Solomon; color:#23797f;">Year:</label>
-                    <select class="form-control"id="year" name="year" >
-					  <option value=2018>2018</option>
-					  <option value=2019>2019</option>
-					  <option value=2020>2020</option>
-					  <option value=2021>2021</option>
-					  <option value=2022>2022</option>
-					  <option value=2023>2023</option>
-					  <option value=2023>2023</option>
+                    <label for="byear" style = "font family:Solomon; color:#23797f;">Year:</label>
+                    <select class="form-control"id="byear" name="byear" >
+					  <option value="2018">2018</option>
+					  <option value="2019">2019</option>
+					  <option value="2020">2020</option>
+					  <option value="2021">2021</option>
+					  <option value="2022">2022</option>
+					  <option value="2023">2023</option>
+					  <option value="2023">2023</option>
+					  <option value="2024">2024</option>
+					  <option value="2025">2025</option>
+					  <option value="2026">2026</option>
+					  <option value="2027">2027</option>
+					  <option value="2028">2028</option>
 
 					</select>
                  </div>
-				<button class="btn btn-info btn-lg" onclick="myfunction()">The time is?</button>
+			    <div class="form-group">
+                    <label for="ffamily" style = "font family:Solomon; color:#23797f;">Font Family:</label>
+					<select class="form-control"id="ffamily" name="ffamily"  >
+					  <option style="font-family:Raleway" value='Raleway'>Raleway</option>
+					  <option style="font-family:Aguafina Script" value='Aguafina Script'>Aguafina Script</option>
+					  <option style="font-family:Paprika" value='Paprika'>Paprika</option>
+					  <option style="font-family:Pattaya" value='Pattaya'>Pattaya</option>
+					  <option style="font-family:Permanent Marker" value='Permanent Marker"'>Permanent Marker</option>
+					  <option style="font-family:Rammetto One" value='Rammetto One'>Rammetto One</option>
+					</select>
+                 </div>
+				 <div class="form-group">
+                    <label for="fcolor" style = "font family:Solomon; color:#23797f;">Font Color:</label>
+                    <input type="text" class="form-control" id="fcolor" name="fontcolor" placeholder="Enter the name/the hex value of the choosen color ">
+                 </div>
 				<a class="btn btn-info btn-lg" onclick="myfunction()"role="button">Generate Design</a>
 			  </form>
 			  </div>
@@ -108,10 +143,10 @@
 	<div class="split right">
 		<div class="container">
 			<div class = "jumbotron" style = "background:transparent">
-				<div class="centered" style="border:black">
-					<div class="container"style="border:1px solid black;padding: 12px 20px;background-image: url(img_chania.jpg); height: 750px; width: 650px;"">
-						<h3 style = "font family:Solomon;"id="title"> Book Cover </h3>
-						<h4 style = "font family:Solomon;"id="subtitle"> Book Cover </h4>
+				<div id "cover" class="centered" style="font-family:'Aguafina Script' ;">
+					<div id="bookstyle"class="container"style="border:1px solid black;padding: 12px 20px;background-image: url(img_chania.jpg); height: 700px; width: 550px; font-weight: bold;color:red;">
+						<h3 id="title" style = "font-size: 50px; font-weight: bold;" > OLIVER TWIST </h3>
+						<h5 id="subtitle" style=" font-weight: bold;"> The Amazing Boy </h5>
 						</br>
 						</br>
 						</br>
@@ -128,7 +163,18 @@
 						</br>
 						</br>
 					
-						<h4 style = "font family:Solomon; "> BBBBBBBBBBBBBBBBBBBBBy: </h4>
+						<h4 style = " margin-left:15%;  font-weight: bold;"> By: </h4>
+						<h4 id="author" style = "margin-left:15%; font-weight: bold;"> Charles Dickens </h4>
+						</br>
+						</br>
+						</br>
+						</br>						
+						</br>
+						</br>
+						</br>
+						</br>
+						<h5 id = "publisherr"style = " margin-left:15%;  font-weight: bold;"> MMMMMMMM </h5>
+						<h6 id = "year"style = " margin-left:15%;  font-weight: bold;"> 2018 </h6>
 					</div>
 				</div>
 			</div>
