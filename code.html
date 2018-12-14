@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+
+
+		.split {
+		  height: 100%;
+		  width: 50%;
+		  position: fixed;
+		  z-index: 1;
+		  top: 6%;
+		  overflow-x: hidden;
+		  padding-top: 20px;
+		  border: 1px solid black;
+		}
+
+		.left {
+		  left: 0;
+		  background-color:#f2f2f2 ;
+		}
+
+		.right {
+		  right: 0;
+		  background-color: white;
+		}
+
+		.centered {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  text-align: center;
+		}
+
+		.centered img {
+		  width: 150px;
+		  border-radius: 50%;
+		}
+		
+	</style>
+	<script>
+		function myfunction()
+		{
+			document.getElementById("title").innerHTML=document.getElementById("btitle").value;
+		}
+	</script>
+</head>
+<body>
+   
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		   <p class="navbar-text" style = "font family:Solomon; font-size:25px">Cover Generator</p>
+		</div>
+	</nav>
+	<div class="split left">
+			<div class="container-fluid">
+			  <div class = "jumbotron" style = "background:transparent">
+			  <h2 style = "font family:Solomon; "> Book Information </h2>
+			  <form action="#">
+			     <div class="form-group">
+                    <label for="btitle" style = "font family:Solomon; color:#23797f;">Book Title:</label>
+                    <input type="text" class="form-control" id="btitle" name="booktitle" placeholder="Your Book Title..." >
+					<span class="help-block" style = "font family:Solomon; color:#23797f;"></span>
+                 </div>
+			     <div class="form-group">
+                    <label for="bsubtitle" style = "font family:Solomon; color:#23797f;">Book Subtitle:</label>
+                    <input type="text" class="form-control" id="bsubtitle" name="booksubtitle" placeholder="Your Book SubTitle..">
+                 </div>
+			     <div class="form-group">
+                    <label for="AName" style = "font family:Solomon; color:#23797f;">Author Name:</label>
+                    <input type="text" class="form-control" id="AName" name="authorname" placeholder="Author Name Is.." >
+                 </div>
+			     <div class="form-group">
+                    <label for="publisher" style = "font family:Solomon; color:#23797f;">Publisher:</label>
+                    <input type="text" class="form-control" id="publisher" name="publisher" placeholder="Enter publisher name..">
+                 </div>
+			     <div class="form-group">
+                    <label for="BGcolor" style = "font family:Solomon; color:#23797f;">Backgroud Color:</label>
+                    <input type="text" class="form-control" id="BGcolor" name="backgroundcolor" placeholder="Choose your backgroud color.." >
+					<span class="help-block" style = "font family:Solomon; color:#23797f;">Enter the hex value of the choosen color. </span>
+                 </div>
+			     <div class="form-group">
+                    <label for="year" style = "font family:Solomon; color:#23797f;">Year:</label>
+                    <select class="form-control"id="year" name="year" >
+					  <option value=2018>2018</option>
+					  <option value=2019>2019</option>
+					  <option value=2020>2020</option>
+					  <option value=2021>2021</option>
+					  <option value=2022>2022</option>
+					  <option value=2023>2023</option>
+					  <option value=2023>2023</option>
+
+					</select>
+                 </div>
+				<button class="btn btn-info btn-lg" onclick="myfunction()">The time is?</button>
+				<a class="btn btn-info btn-lg" onclick="myfunction()"role="button">Generate Design</a>
+			  </form>
+			  </div>
+			</div>
+	</div>
+
+	<div class="split right">
+		<div class="container">
+			<div class = "jumbotron" style = "background:transparent">
+				<div class="centered" style="border:black">
+					<div class="container"style="border:1px solid black;padding: 12px 20px;background-image: url(img_chania.jpg); height: 750px; width: 650px;"">
+						<h3 style = "font family:Solomon;"id="title"> Book Cover </h3>
+						<h4 style = "font family:Solomon;"id="subtitle"> Book Cover </h4>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+						</br>
+					
+						<h4 style = "font family:Solomon; "> BBBBBBBBBBBBBBBBBBBBBy: </h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+     
+</body>
+</html> 
+
+
