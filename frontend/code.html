@@ -52,15 +52,14 @@
 	<script>
 		function myfunction()
 		{
-			document.getElementById("title").innerHTML=document.getElementById("btitle").value;		
+			document.getElementById("title").innerHTML= document.getElementById("btitle").value ;		
 			document.getElementById("subtitle").innerHTML=document.getElementById("bsubtitle").value;
-			document.getElementById("publisherr").innerHTML=document.getElementById("publisher").value;		
-			//document.getElementById("bookstyle").style.background-image.url=document.getElementById("BGimage").value;
+			document.getElementById("publisherr").innerHTML=document.getElementById("publisher").value;
+			document.getElementById("bookstyle").style.backgroundImage='url('+document.getElementById("BGimage").value+')';
 			document.getElementById("bookstyle").style.color=document.getElementById("fcolor").value;
 			document.getElementById("author").innerHTML=document.getElementById("AName").value;
-			//document.getElementById("cover").css=('font-family',' document.getElementById("ffamily").value ');
+			document.getElementById("cover").style.fontFamily=document.getElementById("ffamily").value;		
 			document.getElementById("year").innerHTML=document.getElementById("byear").value;
-
 		}
 	</script>
 </head>
@@ -126,7 +125,7 @@
 					  <option style="font-family:Aguafina Script" value='Aguafina Script'>Aguafina Script</option>
 					  <option style="font-family:Paprika" value='Paprika'>Paprika</option>
 					  <option style="font-family:Pattaya" value='Pattaya'>Pattaya</option>
-					  <option style="font-family:Permanent Marker" value='Permanent Marker"'>Permanent Marker</option>
+					  <option style="font-family:Permanent Marker" value='Permanent Marker'>Permanent Marker</option>
 					  <option style="font-family:Rammetto One" value='Rammetto One'>Rammetto One</option>
 					</select>
                  </div>
@@ -143,10 +142,10 @@
 	<div class="split right">
 		<div class="container">
 			<div class = "jumbotron" style = "background:transparent">
-				<div id "cover" class="centered" style="font-family:'Aguafina Script' ;">
+				<div id ="cover" class="centered" >
 					<div id="bookstyle"class="container"style="border:1px solid black;padding: 12px 20px;background-image: url(img_chania.jpg); height: 700px; width: 550px; font-weight: bold;color:red;">
-						<h3 id="title" style = "font-size: 50px; font-weight: bold;" > OLIVER TWIST </h3>
-						<h5 id="subtitle" style=" font-weight: bold;"> The Amazing Boy </h5>
+						<h3 id="title" id ="cover"style = "font-size: 50px; font-weight: bold;" > OLIVER TWIST </h3>
+						<h5 id="subtitle" id ="cover"style=" font-weight: bold;"> The Amazing Boy </h5>
 						</br>
 						</br>
 						</br>
@@ -163,8 +162,8 @@
 						</br>
 						</br>
 					
-						<h4 style = " margin-left:15%;  font-weight: bold;"> By: </h4>
-						<h4 id="author" style = "margin-left:15%; font-weight: bold;"> Charles Dickens </h4>
+						<h4 id ="cover" style = " margin-left:15%;  font-weight: bold;"> By: </h4>
+						<h4 id="author"id ="cover" style = "margin-left:15%; font-weight: bold;"> Charles Dickens </h4>
 						</br>
 						</br>
 						</br>
@@ -173,8 +172,8 @@
 						</br>
 						</br>
 						</br>
-						<h5 id = "publisherr"style = " margin-left:15%;  font-weight: bold;"> MMMMMMMM </h5>
-						<h6 id = "year"style = " margin-left:15%;  font-weight: bold;"> 2018 </h6>
+						<h5 id = "publisherr" id ="cover" style = " margin-left:15%;  font-weight: bold;"> MMMMMMMM </h5>
+						<h6 id = "year" id ="cover" style = " margin-left:15%;  font-weight: bold;"> 2018 </h6>
 					</div>
 				</div>
 			</div>
